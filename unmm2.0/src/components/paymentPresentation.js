@@ -11,7 +11,7 @@ const PaymentPresentation = ( { payments, modifyPayment } ) => {
                     {/* <HeaderSection/> */}
 
                     <PaymentSection payments={ payments }
-                                            modifyPayment={ modifyPayment } />
+                                    modifyPayment={ modifyPayment } />
             </div>
           );
 }

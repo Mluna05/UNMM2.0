@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 
 //container
-import WithFetchInitialData from './components/withFetchInitialData';
+import Container from './components/container';
 
 function App() {
   return (
     <div className="App">
-        <WithFetchInitialData />
+        <Container />
     </div>
   );
 }
