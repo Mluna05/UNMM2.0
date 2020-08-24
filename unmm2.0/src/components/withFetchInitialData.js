@@ -10,7 +10,7 @@ const useWithFetchInitialData   = ( Wrapped, setInitialInfo, intialPayments ) =>
     const [ loading, setLoading ] = useState( true ); 
     const [ error, setError ] = useState( false ); 
 
-    const Loading = () => <div> Loading... </div>;
+    const Loading = () => <div> Loading x </div>;
     const Error = () => <div> ERROR </div>;
 
     

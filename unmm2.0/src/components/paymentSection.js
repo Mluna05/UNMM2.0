@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense  } from 'react';
 
 //components
 import EditForm from './paymentSection/editForm';
-import PaymentList from './paymentSection/paymentList';
 import PaymentItem from './paymentSection/paymentItem';
+
+const PaymentList = React.lazy(() => import('./paymentSection/paymentList'));
 
 
 const PaymentSection = ( { payments, modifyPayment } ) => {
@@ -69,11 +70,12 @@ const PaymentSection = ( { payments, modifyPayment } ) => {
                                                 handleClose={ editModeHandler }
                                                 id={editMode.id}
                                                 /> }
+                <Suspense fallback={<div>Loading...</div>}>
+                    <PaymentList>
+                        { displayPayments() }
+                    </PaymentList> 
+                </Suspense>
 
-                <PaymentList>
-                   { displayPayments() }
-                </PaymentList> 
-                
             </div>
           );
 }
